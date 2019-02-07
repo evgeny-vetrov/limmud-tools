@@ -1,189 +1,55 @@
 {
-  "product_ids": [
-    
-  ],
-  "data": [
-    {
-      "type": "RADIO",
-      "name": "Пол",
-      "choices": [
-        {
-          "text": "Мужской",
-          "priceModifier": 0,
-          "priceModifierType": "ABSOLUTE"
-        },
-        {
-          "text": "Женский",
-          "priceModifier": 0,
-          "priceModifierType": "ABSOLUTE"
-        }
-      ],
-      "defaultChoice": 0,
-      "required": true
-    },
-    {
-      "type": "TEXTFIELD",
-      "name": "Имя",
-      "choices": [],
-      "required": true
-    },
-    {
-      "type": "TEXTFIELD",
-      "name": "Отчество",
-      "choices": [],
-      "required": true
-    },
-    {
-      "type": "TEXTFIELD",
-      "name": "Фамилия",
-      "choices": [],
-      "required": true
-    },
-    {
-      "type": "TEXTFIELD",
-      "name": "Дата рождения дд/мм/гггг",
-      "choices": [],
-      "required": true
-    },
-    {
-      "type": "TEXTFIELD",
-      "name": "Телефон",
-      "choices": [],
-      "required": true
-    },
-    {
-      "type": "TEXTFIELD",
-      "name": "Город",
-      "choices": [],
-      "required": true
-    },
-    {
-      "type": "TEXTFIELD",
-      "name": "Страна",
-      "choices": [],
-      "required": true
-    },
-    {
-      "type": "DATE",
-      "name": "Дата заезда",
-      "required": false
-    },
-    {
-      "type": "DATE",
-      "name": "Дата отъезда",
-      "required": false
-    },
-    {
-      "type": "SELECT",
-      "name": "Нуждаетесь ли вы в трансфере",
-      "choices": [
-        {
-          "text": "Да",
-          "priceModifier": 0,
-          "priceModifierType": "ABSOLUTE"
-        },
-        {
-          "text": "Нет",
-          "priceModifier": 0,
-          "priceModifierType": "ABSOLUTE"
-        }
-      ],
-      "defaultChoice": 1,
-      "required": false
-    },
-    {
-      "type": "TEXTFIELD",
-      "name": "Номер и марка машины, если нужно",
-      "choices": [],
-      "required": false
-    },
-    {
-      "type": "SELECT",
-      "name": "Я участвовал в предыдущих Лимудах",
-      "choices": [
-        {
-          "text": "Да",
-          "priceModifier": 0,
-          "priceModifierType": "ABSOLUTE"
-        },
-        {
-          "text": "Нет",
-          "priceModifier": 0,
-          "priceModifierType": "ABSOLUTE"
-        }
-      ],
-      "defaultChoice": 1,
-      "required": false
-    },
-    {
-      "type": "SELECT",
-      "name": "Хотели бы вы быть волонтером на Лимуде",
-      "choices": [
-        {
-          "text": "Да",
-          "priceModifier": 0,
-          "priceModifierType": "ABSOLUTE"
-        },
-        {
-          "text": "Нет",
-          "priceModifier": 0,
-          "priceModifierType": "ABSOLUTE"
-        }
-      ],
-      "defaultChoice": 1,
-      "required": false
-    },
-    {
-      "type": "SELECT",
-      "name": "Требуется ли вам кошерное питание",
-      "choices": [
-        {
-          "text": "Да",
-          "priceModifier": 0,
-          "priceModifierType": "ABSOLUTE"
-        },
-        {
-          "text": "Нет",
-          "priceModifier": 0,
-          "priceModifierType": "ABSOLUTE"
-        }
-      ],
-      "defaultChoice": 1,
-      "required": false
-    },
-    {
-      "type": "FILES",
-      "name": "Заполните паспортные данные, чтобы не стоять в очереди при регистрации в гостинице (не обязательно)",
-      "required": false
-    },
-    {
-      "type": "TEXTFIELD",
-      "name": "№ и серия паспорта",
-      "choices": [],
-      "required": false
-    },
-    {
-      "type": "TEXTFIELD",
-      "name": "Кем и когда выдан",
-      "choices": [],
-      "required": false
-    },
-    {
-      "type": "TEXTFIELD",
-      "name": "Адрес прописки: город, улица, дом, квартира",
-      "choices": [],
-      "required": false
-    },
-    {
-      "type": "FILES",
-      "name": "Зарегистрируйте родственника",
-      "required": false
-    },
-    {
-      "type": "TEXTAREA",
-      "name": "Оставьте комментарий при необходимости",
-      "choices": [],
-      "required": false
-    }
-  ]
+    "groups" : [
+		{
+		  "description": "",
+		  "product_ids": [],
+		  "template_ids": [0]
+		}
+	],
+	"templates" :  {
+        		0 : [
+				{
+				  "type": "RADIO",
+				  "name": "Пол",
+				  "choices": [
+					{
+					  "text": "Мужской",
+					  "priceModifier": 0,
+					  "priceModifierType": "ABSOLUTE"
+					},
+					{
+					  "text": "Женский",
+					  "priceModifier": 0,
+					  "priceModifierType": "ABSOLUTE"
+					}
+				  ],
+				  "defaultChoice": 0,
+				  "required": true
+				},
+				{
+				  "type": "TEXTFIELD",
+				  "name": "Имя",
+				  "choices": [],
+				  "required": true
+				},
+				{
+				  "type": "TEXTFIELD",
+				  "name": "Отчество",
+				  "choices": [],
+				  "required": true
+				},
+				{
+				  "type": "TEXTFIELD",
+				  "name": "Фамилия",
+				  "choices": [],
+				  "required": true
+				},
+				{
+				  "type": "TEXTFIELD",
+				  "name": "Дата рождения дд/мм/гггг",
+				  "choices": [],
+				  "required": true
+				}
+			]
+	}
 }
