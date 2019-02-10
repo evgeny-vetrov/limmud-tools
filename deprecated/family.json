@@ -7,7 +7,7 @@
 		}
 	],
 	"templates" :  {
-        		0 : [
+        		"0" : [
 				{
 				  "type": "RADIO",
 				  "name": "Пол",
