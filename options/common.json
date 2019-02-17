@@ -122,6 +122,98 @@
         "base_short",
         "end"
       ]
+    },
+    {
+      "description": "Билет для 2х family multi - econom",
+      "product_ids": [
+        130931985
+      ],
+      "template_ids": [
+        "base",
+        "relative_header",
+        "base_short",
+        "end"
+      ]
+    },
+    {
+      "description": "Билет для 2х adults multi - econom",
+      "product_ids": [
+        130931988
+      ],
+      "template_ids": [
+        "base",
+        "friend_header",
+        "base_short",
+        "end"
+      ]
+    },
+    {
+      "description": "Билет для 3х adults multi - econom",
+      "product_ids": [
+        130931986
+      ],
+      "template_ids": [
+        "base",
+        "friend_header",
+        "base_short",
+        "friend_header",
+        "base_short",
+        "end"
+      ]
+    },
+    {
+      "description": "Билет для 4х adults multi - econom",
+      "product_ids": [
+        130931987
+      ],
+      "template_ids": [
+        "base",
+        "friend_header",
+        "base_short",
+        "friend_header",
+        "base_short",
+        "friend_header",
+        "base_short",
+        "end"
+      ]
+    },
+    {
+      "description": "Билет для 2х family multi - standard",
+      "product_ids": [
+        130931991
+      ],
+      "template_ids": [
+        "base",
+        "relative_header",
+        "base_short",
+        "end"
+      ]
+    },
+    {
+      "description": "Билет для 2х adults multi - standard",
+      "product_ids": [
+        130931994
+      ],
+      "template_ids": [
+        "base",
+        "friend_header",
+        "base_short",
+        "end"
+      ]
+    },
+    {
+      "description": "Билет для 3х adults multi - standard",
+      "product_ids": [
+        130931992
+      ],
+      "template_ids": [
+        "base",
+        "friend_header",
+        "base_short",
+        "friend_header",
+        "base_short",
+        "end"
+      ]
     }
   ],
   "templates": {
@@ -349,6 +441,13 @@
       {
         "type": "FILES",
         "name": "Зарегистрировать родственника",
+        "required": false
+      }
+    ],
+    "friend_header": [
+      {
+        "type": "FILES",
+        "name": "Зарегистрировать друга",
         "required": false
       }
     ],

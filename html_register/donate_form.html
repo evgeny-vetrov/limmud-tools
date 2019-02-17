@@ -1,0 +1,144 @@
+<script data-cfasync="false" type="text/javascript"
+        src="https://app.ecwid.com/script.js?16157264&data_platform=code"
+        charset="utf-8"></script><script>Ecwid.init();</script>
+<style>
+    .ec-store__cart-page--only-checkout .ec-cart__sidebar .ec-page-title {
+        display: none;
+    }
+
+    .ec-cart-item__wrap-secondary, .ec-cart__shopping, .ec-cart__coupon, .ec-cart__next {
+        display: none;
+    }
+</style>
+<div id="rec85179879" class="r t-rec t-rec_pt_45 t-rec_pb_0" style="padding-top:45px;padding-bottom:0px; "
+     data-animationappear="off" data-record-type="121">
+    <!-- T811 -->
+    <div class="t811">
+        <div class="t-container">
+            <div class="t-col t-col_8 t-prefix_2 t-align_center">
+                <div class="t811__content"
+                     style="background-color: #2758b3; border-width: 0px; border-radius: 2px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);">
+                    <div class="t811__text-wrapper">
+                        <div class="t811__title t-title t-title_sm t-margin_auto" style="color:#ffffff;font-size:25px;"
+                             field="title">Поддержите Лимуд!
+                        </div>
+                        <div class="t811__descr t-descr t-descr_xl t-margin_auto" style="color:#ffffff;font-size:18px;"
+                             field="descr">
+                            <div style="font-family:'Montserrat';" data-customstyle="yes">Вы можете прислать
+                                пожертвование в любом размере*
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-form t-form_inputs-total_1">
+                        <div class="t-form__inputsbox">
+                            <div class="t-input-group t-input-group_em">
+                                <div class="t-input-block">
+                                    <input type="text" name="" class="t-input t811_price" value="Сумма"
+                                           placeholder="Сумма"
+                                           style="color:#ffffff;  background-color:#7ea0e0; border-radius: 30px; -moz-border-radius: 30px; -webkit-border-radius: 30px;">
+                                </div>
+                            </div>
+                            <div class="t-form__submit">
+                                <!--                                <a href="#popup:partner" target="" data-tilda-event-name="/tilda/click/rec84844366/button1" class="js-click-stat"><div class="t-btn t142__submit " style="color:#fafafa;border:1px solid #2758b3;background-color:#2758b3;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;">Стать Партнером</div></a>-->
+                                <a href="#popup:donate" target=""
+                                   data-tilda-event-name="/tilda/click/rec88499647/button1" class="js-click-stat"
+                                   id="donate-button-a">
+                                    <button type="submit" class="t-submit t811_submit"
+                                            style="color:#ffffff;border:1px solid #ffffff;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;">
+                                        Поддержать
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#rec85179879 .t811_submit').click(function () {
+            var link = $(this).parent();
+            var amount = $('#rec85179879 .t811_price').val();
+            var href = '#order:donation=' + amount;
+            $(link).attr('href', href);
+            console.log(href);
+        });
+
+        $('#rec85179879 .t811_price').on('input', function () {
+            this.value = this.value.replace(/[^0-9.,]*/g, '');
+        });
+    </script>
+
+
+    <style>
+
+        #rec85179879 .t-btn[data-btneffects-first],
+        #rec85179879 .t-btn[data-btneffects-second],
+        #rec85179879 .t-submit[data-btneffects-first],
+        #rec85179879 .t-submit[data-btneffects-second] {
+            position: relative;
+            overflow: hidden;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+
+    </style>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('#donate-button-a').click(function () {
+                var amountInput = document.querySelector('#form88499647 input[name=amount]');
+                var amount = document.querySelector('input.t811_price').value;
+                if (/^\d+$/.test(amount)) {
+                    amountInput.value = amount;
+                    amountInput.classList += ' t-input_has-content';
+                }
+            });
+
+            $('input[name=amount]').on('input', function () {
+                this.value = this.value.replace(/[^0-9.,]*/g, '');
+            });
+
+            $('#form88499647 button[type=submit]').click(function () {
+                var amountInput = document.querySelector('#form88499647 input[name=amount]').value;
+                var name = document.querySelector('#form88499647 input[name=name]').value;
+                var surname = document.querySelector('#form88499647 input[name=surname]').value;
+                var phone = document.querySelector('#form88499647 input[name=phone]').value;
+                var email = document.querySelector('#form88499647 input[name=email]').value;
+                var product = {
+                    id: 131050944,
+                    quantity: parseInt(amountInput),
+                    options: {
+                        "Имя": name,
+                        "Фамилия": surname,
+                        "Телефон": phone,
+                        "Email": email
+                    },
+                    callback: function(success, product, cart) {
+                        t702_closePopup();
+                        if(success){
+                            Ecwid.Cart.setCustomerEmail(email);
+                            Ecwid.Cart.gotoCheckout();
+                        }
+                    }
+                };
+                Ecwid.Cart.addProduct(product);
+                return false;
+            })
+        });
+
+        Ecwid.OnPageLoaded.add(function(page) {
+            if(page.type === 'CART') {
+                console.log("loaded cart");
+                document.querySelector('.ec-cart__body .page-title__name').innerHTML = 'Поддержи Лимуд';
+                document.querySelector('.ec-cart__body .ec-cart__buttons .form-control__button-text').innerHTML = 'Поддержать';
+                document.querySelector('.ec-cart__body .ec-cart-email__text').innerHTML = 'Введите адрес своей электронной почты. На этот адрес будут отправляться уведомления о статусе платежа.';
+            }
+        });
+    </script>
+</div>
